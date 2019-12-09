@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="/add">Add New Post to the Feed!</a>
+<br/>
+<br/>
+<table>
+    <tr>
+        <th> Message </th>
+        <th> Sent By </th>
+        <th> Date </th>
+    </tr>
+    <tr th:each="message : ${Message}">
+        <td th:text="${twPost.msg}"></td>
+        <td th:text="${twPost.postdate}"></td>
+        <td th:text="${twPost.sentby}"></td>
+    </tr>
+</table>
+</body>
+</html>
